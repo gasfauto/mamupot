@@ -1,0 +1,269 @@
+/* IMPORTS */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300&family=Meddon&family=Montserrat&family=Nunito+Sans&display=swap');
+
+/* VARIABLES */
+:root {
+    --principal: #1E1E1E;
+    --secondary: #FAAB34;
+    --tertiary: #04e4e4;
+    --font-primary: "Nunito Sans", sans-serif;
+    --font-secondary: "Meddon", cursive;
+}
+
+/* NORMALIZE */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/* Globals */
+
+html {
+    font-size: 62.5%;
+    font-family: var(--font-primary);
+    color: var(--principal);
+}
+
+header {
+    background-color: white;
+    margin-top: 3rem;
+    padding: 1rem;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--principal);
+    display: inline-block;
+}
+
+footer {
+
+    margin-bottom: 0rem;
+    max-height: 120px;
+}
+/* HELPERS */
+
+.flex-row {
+    display: flex;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+/*INDEX */
+
+.container {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 200px 1fr 1fr 400px;
+    gap: 2rem 2rem;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "navbar navbar navbar navbar"
+      ". img description ."
+      ". pots coushion ."
+      "footer footer footer footer";
+  }
+
+  .navbar { grid-area: navbar;
+    height: 200px;
+    }
+
+    header .nav {
+        
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 2rem;
+    }
+    
+    
+    
+    header .logo {
+        flex-basis: 30%;
+        max-width: 100px;
+        margin-left: 200px;
+    }
+    
+    header .menu {
+        flex-basis: 40%;
+        justify-content: space-between;
+        margin-right: 200px;
+    }
+    
+    
+    
+    .menu .menu__link:hover {
+        color: var(--secondary);
+        transition: all .3s ease-in-out;
+    }
+    
+    
+    
+    .menu .menu__item .menu__link {
+        font-size: 1.8em;
+        padding: 1rem;
+    }
+    
+    .menu .menu__link--active {
+        color: var(--secondary);
+    }
+
+  .img {grid-area: img;
+
+    background-image: url("../img/index_image1.png");
+    background-size: cover;
+    width: 600px;
+    height: 600px;
+}
+
+
+  .description { grid-area: description; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 600px;
+    height: 600px;
+    margin-left: 2rem;
+}
+   
+  .description h2 {
+    font-family: var(--font-secondary);
+    font-size: 3em;
+    color: var(--secondary);
+}
+
+  .description h1 {
+    font-family: var(--font-primary);
+    font-size: 6em;
+}
+  .description h3 {
+    font-size: 1.6em;
+}
+
+  .pots { grid-area: pots;
+    position: relative;
+    display: inline-block;
+    width: 600px;
+    height: 600px;
+}
+ .maceta {
+     width: 600px;
+     height: 600px;
+  }   
+  .pots p{
+      position: absolute;
+      font-family: var(--font-secondary);
+      font-size: 6em;
+      color: white;
+      top: 12%;
+      left: 10%;
+  }
+
+  .coushion { grid-area: coushion;
+    position: relative;
+    display: inline-block;
+    width: 600px;
+    height: 600px;
+}
+
+  .cojin {
+     width: 600px;
+     height: 600px;
+    }
+  
+  .coushion p{
+    position: absolute;
+      font-family: var(--font-secondary);
+      font-size: 6em;
+      color: white;
+      top: 12%;
+      left: 10%;  
+  }
+  
+  .footer { grid-area: footer; 
+    width: 100%;
+    min-height: 400px;
+    background-image: url("../img/footer_back.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+  
+.grid__container {
+    display: grid;
+    grid-template-rows: 200px 200px;
+    grid-template-columns: auto auto auto;
+    justify-items: center;
+    align-items: center;
+
+}
+
+.grid__container__logo {
+    grid-column: 2/3;
+
+}
+
+.grid__container__ins {
+    display: flex;
+    flex-direction: column;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    justify-self: center;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.grid__container__ins p {
+    font-size: 1.6em;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+.grid__container__fb {
+    display: flex;
+    flex-direction: column;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    justify-self: center;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.grid__container__fb p {
+    font-size: 1.6rem;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+.grid__container__mail {
+    display: flex;
+    flex-direction: column;
+    grid-column: 3/4;
+    grid-row: 2/3;
+    justify-self: center;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.grid__container__mail p {
+    font-size: 1.6rem;
+    color: white;
+    text-align: center;
+    font-weight: bold;}
