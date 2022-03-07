@@ -78,6 +78,8 @@ footer {
       "footer footer footer footer";
   }
 
+  /* NAVBAR */
+
   .navbar { grid-area: navbar;
     height: 200px;
     }
@@ -121,6 +123,8 @@ footer {
         color: var(--secondary);
     }
 
+/* INDEX MAIN */
+
   .img {grid-area: img;
 
     background-image: url("../img/index_image1.png");
@@ -137,6 +141,7 @@ footer {
     width: 600px;
     height: 600px;
     margin-left: 2rem;
+    min-width: 320px;
 }
    
   .description h2 {
@@ -193,13 +198,12 @@ footer {
       left: 10%;  
   }
   
+/* FOOTER */
+
   .footer { grid-area: footer; 
     width: 100%;
-    min-height: 400px;
-    background-image: url("../img/footer_back.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-}
+    height: 100%;
+  }
   
 .grid__container {
     display: grid;
@@ -207,6 +211,9 @@ footer {
     grid-template-columns: auto auto auto;
     justify-items: center;
     align-items: center;
+    background-image: url("../img/footer_back.png");
+    background-size: cover;
+    background-repeat: no-repeat;
 
 }
 
@@ -267,3 +274,45 @@ footer {
     color: white;
     text-align: center;
     font-weight: bold;}
+
+    /* MEDIA QUERIES */
+
+    @media screen and (max-width: 768px) {
+        .container {
+            grid-template-columns: 1fr;
+            grid-template-rows: 200px 1fr 1fr 1fr 1fr 400px;
+            grid-template-areas:
+              "navbar"
+              "img"
+              "description"
+              "pots" 
+              "coushion"
+              "footer";
+              justify-items: center;
+          }
+          .grid__container {
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+            grid-template-columns: 1fr;
+        }
+        
+        .grid__container__logo {
+            grid-column: 1/2;
+        
+        }
+        
+        .grid__container__ins {
+            grid-column: 1/2;
+            grid-row: 2/3;
+        }
+        
+        
+        .grid__container__fb {
+            grid-column: 1/2;
+            grid-row: 3/4;    
+        }
+
+        .grid__container__mail {
+            grid-column: 1/2;
+            grid-row: 4/5;
+        }
+    }
