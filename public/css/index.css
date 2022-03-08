@@ -51,6 +51,7 @@ footer {
     margin-bottom: 0rem;
     max-height: 120px;
 }
+
 /* HELPERS */
 
 .flex-row {
@@ -64,68 +65,86 @@ footer {
 
 
 
-/*INDEX */
+/*GRID INDEX */
 
-.container {  display: grid;
+.container {
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 200px 1fr 1fr 400px;
     gap: 2rem 2rem;
     grid-auto-flow: row;
     grid-template-areas:
-      "navbar navbar navbar navbar"
-      ". img description ."
-      ". pots coushion ."
-      "footer footer footer footer";
-  }
+        "navbar navbar navbar navbar"
+        ". img description ."
+        ". pots coushion ."
+        "footer footer footer footer";
+}
 
-  /* NAVBAR */
+/* GRID POTS */
+.container_pots {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 200px 1fr .3fr 1fr 400px;
+    gap: 2rem 2rem;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "navbar navbar navbar navbar navbar"
+        "slide slide slide  slide slide"
+        ". enjoy enjoy enjoy ."
+        ". card card card ."
+        "footer footer footer footer footer";
+}
 
-  .navbar { grid-area: navbar;
+/* NAVBAR */
+
+.navbar {
+    grid-area: navbar;
     height: 200px;
-    }
+}
 
-    header .nav {
-        
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 2rem;
-    }
-    
-    
-    
-    header .logo {
-        flex-basis: 30%;
-        max-width: 100px;
-        margin-left: 200px;
-    }
-    
-    header .menu {
-        flex-basis: 40%;
-        justify-content: space-between;
-        margin-right: 200px;
-    }
-    
-    
-    
-    .menu .menu__link:hover {
-        color: var(--secondary);
-        transition: all .3s ease-in-out;
-    }
-    
-    
-    
-    .menu .menu__item .menu__link {
-        font-size: 1.8em;
-        padding: 1rem;
-    }
-    
-    .menu .menu__link--active {
-        color: var(--secondary);
-    }
+header .nav {
+
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+
+
+header .logo {
+    flex-basis: 30%;
+    max-width: 100px;
+    margin-left: 200px;
+}
+
+header .menu {
+    flex-basis: 40%;
+    justify-content: space-between;
+    margin-right: 200px;
+}
+
+
+
+.menu .menu__link:hover {
+    color: var(--secondary);
+    transition: all .3s ease-in-out;
+}
+
+
+
+.menu .menu__item .menu__link {
+    font-size: 1.8em;
+    padding: 1rem;
+}
+
+.menu .menu__link--active {
+    color: var(--secondary);
+}
 
 /* INDEX MAIN */
 
-  .img {grid-area: img;
+.img {
+    grid-area: img;
 
     background-image: url("../img/index_image1.png");
     background-size: cover;
@@ -134,7 +153,8 @@ footer {
 }
 
 
-  .description { grid-area: description; 
+.description {
+    grid-area: description;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -143,68 +163,117 @@ footer {
     margin-left: 2rem;
     min-width: 320px;
 }
-   
-  .description h2 {
+
+.description h2 {
     font-family: var(--font-secondary);
     font-size: 3em;
     color: var(--secondary);
 }
 
-  .description h1 {
+.description h1 {
     font-family: var(--font-primary);
     font-size: 6em;
 }
-  .description h3 {
+
+.description h3 {
     font-size: 1.6em;
 }
 
-  .pots { grid-area: pots;
-    position: relative;
-    display: inline-block;
-    width: 600px;
-    height: 600px;
-}
- .maceta {
-     width: 600px;
-     height: 600px;
-  }   
-  .pots p{
-      position: absolute;
-      font-family: var(--font-secondary);
-      font-size: 6em;
-      color: white;
-      top: 12%;
-      left: 10%;
-  }
-
-  .coushion { grid-area: coushion;
+.pots {
+    grid-area: pots;
     position: relative;
     display: inline-block;
     width: 600px;
     height: 600px;
 }
 
-  .cojin {
-     width: 600px;
-     height: 600px;
-    }
-  
-  .coushion p{
+.maceta {
+    width: 600px;
+    height: 600px;
+}
+
+.pots p {
     position: absolute;
-      font-family: var(--font-secondary);
-      font-size: 6em;
-      color: white;
-      top: 12%;
-      left: 10%;  
-  }
-  
+    font-family: var(--font-secondary);
+    font-size: 6em;
+    color: white;
+    top: 12%;
+    left: 10%;
+}
+
+.coushion {
+    grid-area: coushion;
+    position: relative;
+    display: inline-block;
+    width: 600px;
+    height: 600px;
+}
+
+.cojin {
+    width: 600px;
+    height: 600px;
+}
+
+.coushion p {
+    position: absolute;
+    font-family: var(--font-secondary);
+    font-size: 6em;
+    color: white;
+    top: 12%;
+    left: 10%;
+}
+
+
+/*POTS MAIN  */
+
+.slide {
+    grid-area: slide;
+    display: flex;
+    justify-content: center;
+    background-image: url("../img/pot_section1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 400px;
+}
+
+.slide_img {
+    width: 100%;
+}
+
+.slide p {
+    align-self: center;
+    font-size: 6em;
+    font-weight: bold;
+}
+
+.enjoy {
+    grid-area: enjoy;
+    display: flex;
+    justify-content: center;
+}
+
+.enjoy p{
+    font-family: var(--font-secondary);
+    color: var(--secondary);
+    font-size: 3em;
+}
+
+.card {grid-area: card;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-between;
+    row-gap: 10px;
+}
+
 /* FOOTER */
 
-  .footer { grid-area: footer; 
+.footer {
+    grid-area: footer;
     width: 100%;
     height: 100%;
-  }
-  
+}
+
 .grid__container {
     display: grid;
     grid-template-rows: 200px 200px;
@@ -273,46 +342,60 @@ footer {
     font-size: 1.6rem;
     color: white;
     text-align: center;
-    font-weight: bold;}
+    font-weight: bold;
+}
 
-    /* MEDIA QUERIES */
+/* MEDIA QUERIES */
 
-    @media screen and (max-width: 768px) {
-        .container {
-            grid-template-columns: 1fr;
-            grid-template-rows: 200px 1fr 1fr 1fr 1fr 400px;
-            grid-template-areas:
-              "navbar"
-              "img"
-              "description"
-              "pots" 
-              "coushion"
-              "footer";
-              justify-items: center;
-          }
-          .grid__container {
-            grid-template-rows: 1fr 1fr 1fr 1fr;
-            grid-template-columns: 1fr;
-        }
-        
-        .grid__container__logo {
-            grid-column: 1/2;
-        
-        }
-        
-        .grid__container__ins {
-            grid-column: 1/2;
-            grid-row: 2/3;
-        }
-        
-        
-        .grid__container__fb {
-            grid-column: 1/2;
-            grid-row: 3/4;    
-        }
-
-        .grid__container__mail {
-            grid-column: 1/2;
-            grid-row: 4/5;
-        }
+@media screen and (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 200px 1fr 1fr 1fr 1fr 400px;
+        grid-template-areas:
+            "navbar"
+            "img"
+            "description"
+            "pots"
+            "coushion"
+            "footer";
+        justify-items: center;
     }
+
+    .container_pots {
+        grid-template-columns: 1fr;
+        grid-template-rows: 200px 1fr 1fr 1fr 1fr 400px;
+        grid-template-areas:
+            "navbar"
+            "slide"
+            "enjoy"
+            "card"
+            "footer";
+        justify-items: stretch;
+    }
+
+    .grid__container {
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+    }
+
+    .grid__container__logo {
+        grid-column: 1/2;
+
+    }
+
+    .grid__container__ins {
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+
+
+    .grid__container__fb {
+        grid-column: 1/2;
+        grid-row: 3/4;
+    }
+
+    .grid__container__mail {
+        grid-column: 1/2;
+        grid-row: 4/5;
+    }
+}
