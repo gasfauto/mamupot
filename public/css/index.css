@@ -67,7 +67,7 @@ footer {
 
 /*GRID INDEX */
 
-.container {
+.containerg {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 200px 1fr 1fr 400px;
@@ -81,7 +81,7 @@ footer {
 }
 
 /* GRID POTS */
-.container_pots {
+/* .container_pots {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 200px 1fr .3fr 1fr 400px;
@@ -93,11 +93,11 @@ footer {
         ". enjoy enjoy enjoy ."
         ". card card card ."
         "footer footer footer footer footer";
-}
+} */
 
 /* NAVBAR */
 
-.navbar {
+.navbarm {
     grid-area: navbar;
     height: 200px;
 }
@@ -226,24 +226,14 @@ header .menu {
 
 /*POTS MAIN  */
 
-.slide {
-    grid-area: slide;
+.slide_pot {
+
     display: flex;
     justify-content: center;
     background-image: url("../img/pot_section1.png");
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 400px;
-}
-
-.slide_img {
-    width: 100%;
-}
-
-.slide p {
-    align-self: center;
-    font-size: 6em;
-    font-weight: bold;
 }
 
 .enjoy {

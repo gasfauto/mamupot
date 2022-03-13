@@ -6,52 +6,67 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mamu.pot | Macetas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/index.css">
 </head>
 
-<body class="container_pots">
+<body>
     <!-- NAVBAR -->
-    <header class="navbar">
-        <nav class="nav flex-row">
-            <picture>
-                <a href="../../index.html"><img class="logo" src="../img/logo_footer.png"
-                        alt="Esto es el isotipo de la marca Mamu.pot"></a>
-            </picture>
-            <ul class="menu flex-row">
-                <li class="menu__item">
-                    <a class="menu__link menu__link--active" href="pots.html">Macetas</a>
-                </li>
-                <li class="menu__item">
-                    <a class="menu__link" href="coushion.html">Cojines</a>
-                </li>
-                <li class="menu__item">
-                    <a class="menu__link" href="acerca.html">Acerca de</a>
-                </li>
-                <li class="menu__item">
-                    <a class="menu__link" href="contacto.html">Contacto</a>
-                </li>
-            </ul>
+    <header class="navbarm">
+        <nav class="nav flex-row navbar sticky-top navbar-light bg-light">
+            <div class="container-fluid">
+                <picture class="navbar-brand">
+                    <a href="../../index.html"><img class="logo" src="../img/logo_footer.png"
+                            alt="Esto es el isotipo de la marca Mamu.pot"></a>
+                </picture>
+                <ul class="menu flex-row">
+                    <li class="menu__item">
+                        <a class="menu__link menu__link--active" href="pots.html">Macetas</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="coushion.html">Cojines</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="acerca.html">Acerca de</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
     </header>
 
-    <div class="slide">
-        <!-- <img class="slide_img" src="../img/pot_section1.png" alt=""> -->
-        <p>Macetas</p>
+    <div class="slide_pot">
     </div>
     <div class="enjoy">
         <p>Disfruta nuestro trabajo</p>
     </div>
-    <div class="card">
-        <img src="../img/pot_gallery1.png" alt="Maceta1">
-        <img src="../img/pot_gallery2.png" alt="Maceta2">
-        <img src="../img/pot_gallery3.png" alt="Maceta3">
-        <img src="../img/pot_gallery4.png" alt="Maceta4">
-        <img src="../img/pot_gallery5.png" alt="Maceta5">
-        <img src="../img/pot_gallery6.png" alt="Maceta6">
-    </div>
-
-     <!-- FOOTER -->
-     <footer class="footer">
+    <section class="container">
+        <div class="row">
+            <article class="col-md-4">
+                <img class="img-fluid" src="../img/pot_gallery1.png" class="car-img-top" alt="Maceta1">
+            </article>
+            <article class="col-md-4">
+                <img class="img-fluid" src="../img/pot_gallery2.png" class="car-img-top" alt="Maceta2">
+            </article>
+            <article class="col-md-4">
+                <img class="img-fluid" src="../img/pot_gallery3.png" class="car-img-top" alt="Maceta3">
+            </article>
+            <article class="col-md-4">
+                <img class="img-fluid" src="../img/pot_gallery4.png" class="car-img-top" alt="Maceta4">
+            </article>
+            <article class="col-md-4">
+                <img class="img-fluid" src="../img/pot_gallery5.png" class="car-img-top" alt="Maceta5">
+            </article>
+            <article class="col-md-4">
+                <img class="img-fluid" src="../img/pot_gallery6.png" class="car-img-top" alt="Maceta6">
+            </article>
+        </div>
+    </section>
+    <!-- FOOTER -->
+    <footer class="footer">
         <div class="grid__container">
             <picture class="grid__container__logo">
                 <a href="../../index.html"><img src="../img/logo_footer.png" alt="logo_footer"></a>
@@ -72,6 +87,9 @@
             </div>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>
