@@ -85,7 +85,7 @@ body {
 .nav_menu_link:hover,
 .nav_menu_link-activate {
     background-color: var(--secondary);
-    transition: .5s, ease-in-out;
+    transition: .5s ease-in-out;
 }
 
 .nav_toggle {
@@ -96,7 +96,11 @@ body {
     padding: 0 20px;
     line-height: 60px;
     display: none;
+    cursor: pointer;
 }
+
+/* FOOTER */
+
 
 
 
@@ -134,7 +138,7 @@ body {
         overflow-y: auto;
 
         left: 100%;
-        transition: left 0.3s;
+        transition: left 0.3s ease-in-out;
     }
     .nav_menu_item {
         line-height: 7rem;
@@ -152,5 +156,9 @@ body {
 
     .nav_menu-visible{
         left: 0;
+    }
+
+    .nav_toggle:focus-visible:not(:focus-visible) {
+        outline: none;
     }
 }
