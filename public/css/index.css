@@ -264,14 +264,70 @@ footer {
     max-width: 1200px;
     margin: 0 auto;
     align-items: center;
+    padding: 1rem;
 }
 
 .about_img {
     width: 60rem;
     height: 60rem;
     flex-basis: 50%;
+    padding: 2rem;
 }
 
+.description_about {
+    padding-left: 1rem;
+}
+
+.description_about h3 {
+    font-family: var(--font-secondary);
+    font-size: 3em;
+    color: var(--secondary);
+    padding-left: 2rem;
+}
+
+.description_about p {
+    font-family: var(--font-primary);
+    font-size: 2em;
+}
+
+/* CUSHIONS & POTS */
+
+.title {
+    font-family: var(--font-secondary);
+    font-size: 4em;
+    color: var(--secondary);
+    text-align: center;
+}
+.grid_gallery{
+    display: grid;
+    max-width: 992px;
+    margin: 0 auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 2rem 1rem;
+    justify-items: center;
+    padding: 2rem;
+}
+
+.container_gallery figure {
+    height: 30rem;
+    width: 30rem;
+    overflow: hidden;
+    border-radius: .6rem;
+    box-shadow: 0 .1rem 1rem;
+    cursor: pointer;
+}
+
+.container_gallery figure img {
+    width: 100%;
+    height: 100%;
+    transition: all .5s ease-in-out;
+}
+
+.container_gallery figure img:hover {
+    width: 110%;
+    height: 110%;
+}
 /* MEDIA QUERIES */
 @media screen and (max-width: 992px) {
     .presentation {
@@ -287,6 +343,16 @@ footer {
         max-width: 100vh;
         margin: 0 auto;
         justify-content: center;
+    }
+    .container_about {
+        display: flex;
+        flex-flow: column;
+        height: 100%;
+       
+    }
+    .grid_gallery{     
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
     }
 }
 @media screen and (max-width: 768px) {
@@ -372,6 +438,10 @@ footer {
         grid-row: 4/5;
     }    
 
+    .container_gallery figure {
+        height: 20rem;
+        width: 20rem;
+    }
     
 }
 
