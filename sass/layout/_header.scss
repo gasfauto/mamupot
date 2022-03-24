@@ -1,0 +1,107 @@
+/* NAVBAR */
+
+.header {
+    background-color: rgb(248, 248, 248);
+    height: 10rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav_link {
+    color: var(--principal);
+    text-decoration: none;
+}
+
+.logo {
+    height: 8rem;
+    width: 8rem;
+    margin-top: 1rem;
+    margin-left: 2rem;
+}
+
+.nav_menu {
+    display:flex ;
+    margin-right: 2rem;
+    list-style: none;
+    &_item {font-size: 1.8em;
+        margin: 0 1em;
+        width: max-content;}
+    &_link {padding: 8px 12px;
+        border-radius: 3px;}
+    &_link:hover,
+    &_link-activate {background-color: $secondary;
+        transition: .5s ease-in-out;}
+}
+
+
+.nav_toggle {
+    color: $secondary;
+    background: none;
+    border: none;
+    font-size: 3em;
+    padding: 0 20px;
+    line-height: 60px;
+    display: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    
+    body {
+        padding-top: 70px;
+    }
+
+    /* HEADER */
+    .header {
+        height: 8rem;
+    }
+
+    .logo {
+        height: 6rem;
+        width: 6rem;
+        margin-top: .5rem;
+        margin-left: 2rem;
+    }
+
+    .nav_menu {
+        flex-direction: column;
+        margin-right: 2rem;
+        background-color: rgb(248, 248, 248);
+        position: fixed;
+        left: 0;
+        top: 8rem ;
+        width: 100%;
+        align-items: center;
+        padding: 2rem 0;
+        height: calc(100% - 8rem);
+        overflow-y: auto;
+        left: 100%;
+        transition: left 0.3s ease-in-out;
+        &_item {line-height: 7rem;}
+        &_link:hover,
+        &_link-active {background: none;
+            color: $secondary;}
+    }
+
+    .nav_toggle {
+        display: block;
+    }
+
+    .nav_menu-visible{
+        left: 0;
+    }
+
+    .nav_toggle:focus-visible:not(:focus-visible) {
+        outline: none;
+    }
+}

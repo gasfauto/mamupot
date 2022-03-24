@@ -1,0 +1,17 @@
+/* VARIABLES*/ 
+@import './abstracts/variables';
+
+/*GLOBALES*/ 
+@import './base/normalize';
+@import './abstracts/mixins';
+
+/*lAYOUT*/
+@import './layout/footer';
+@import './layout/header';
+
+/*PAGES*/ 
+@import './pages/home';
+@import './pages/about';
+@import './pages/pots';
+@import './pages/cushions';
+@import './pages/contact';

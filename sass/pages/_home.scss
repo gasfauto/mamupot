@@ -1,0 +1,64 @@
+/* MAIN INDEX */
+
+.presentation {
+    display: flex;
+    height: 60rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+    &_img {width: 60rem;
+        height: 60rem;
+        flex-basis: 50%;}
+    &_description{
+        h2{font-family: $font-secondary;
+            font-size: 3.6em;
+            color: $secondary;}
+        h1 {font-size: 4.2em;}
+        p{font-size: 1.6em;}
+    } 
+}
+
+
+.container {
+    display: flex;
+    flex-flow: row;
+    height: 60rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+    &_pot{width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        padding: 0 1rem;
+            figure {position: relative;
+                height: 55rem;
+                width: 55rem;
+                overflow: hidden;
+                border-radius: .6rem;
+                box-shadow: 0 .1rem 1rem;
+                cursor: pointer;
+                img {width: 100%;
+                    height: 100%;
+                    transition: all .5s ease-in-out;}
+                .layer {position: absolute;
+                    top: 0;
+                    height: 100%;
+                    width: 100%;
+                    background: rgba(126, 126, 126, 0.7);
+                    opacity: 0;
+                    transition: all .5s ease-in-out;
+                    visibility: hidden;
+                    text-align: center;
+                        h2{font-family: $font-secondary;
+                            font-size: 4em;
+                            color: $secondary;
+                            transition: all .5s ease-in-out;}}}}
+            figure:hover > .layer {
+                opacity: 1;
+                visibility: visible;
+                h2{margin-top: 7rem;
+                    margin-bottom: 1.5rem;}
+            }
+}
