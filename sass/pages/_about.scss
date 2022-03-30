@@ -1,0 +1,36 @@
+/* ABOUT */
+.container_about {
+    display: flex;
+    flex-flow: row;
+    height: 60rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+    padding: 1rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+.about_img {
+    width: 60rem;
+    height: 60rem;
+    flex-basis: 50%;
+    padding: 2rem;
+}
+
+.description_about {
+    padding-left: 1rem;
+    & h3 {font-family: $font-secondary;
+        font-size: 3em;
+        color: $secondary;
+        padding-left: 2rem;}
+    & p {font-family: $font-primary;
+        font-size: 2em;}
+}
+
+@media screen and (max-width: 992px) {
+    .container_about {
+        display: flex;
+        flex-flow: column;
+        height: 100%;}
+}
