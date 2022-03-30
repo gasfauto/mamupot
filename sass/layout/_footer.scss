@@ -10,17 +10,30 @@
     grid-row-gap: 1.5rem;
 }
 
+
+
 .footer_logo {
     grid-column: 2/3;
     margin-top: 1rem;
 }
 
-.footer_instagram {
-    grid-column: 1/2;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+$redes:(instagram:#{1/2},facebook:#{2/3},mail:#{3/4});
+$estilos: (dis:flex, dir:column,ali:center);
+@each $red,$col in $redes {
+    .footer_#{$red}{
+        grid-column: $col;
+        display: map-get($estilos , dis );
+        flex-direction: map-get($estilos, dir);
+        align-items: map-get($estilos, ali);
+    }
 }
+
+// .footer_instagram {
+//     grid-column: 1/2;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+// }
 
 
 .footer_instagram p{
@@ -28,24 +41,24 @@
     font-size: 1.6em;
     color: white;
 }
-.footer_facebook {
-    grid-column: 2/3;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+// .footer_facebook {
+//     grid-column: 2/3;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+// }
 
 .footer_facebook p{
     font-family: $font-primary;
     font-size: 1.6em;
     color: white;
 }
-.footer_mail {
-    grid-column: 3/4;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+// .footer_mail {
+//     grid-column: 3/4;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+// }
 
 .footer_mail p{
     font-family: $font-primary;

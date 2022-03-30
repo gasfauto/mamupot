@@ -6,18 +6,22 @@
     max-width: 1200px;
     margin: 0 auto;
     align-items: center;
-    &_img {width: 60rem;
-        height: 60rem;
-        flex-basis: 50%;}
-    &_description{
+    &_description
         h2{font-family: $font-secondary;
             font-size: 3.6em;
             color: $secondary;}
         h1 {font-size: 4.2em;}
         p{font-size: 1.6em;}
-    } 
 }
 
+
+.presentation_img {
+    @extend .presentation;
+        width: 60rem;
+        height: 60rem;
+        flex-basis: 50%;
+    
+}
 
 .container {
     display: flex;
@@ -62,3 +66,19 @@
                     margin-bottom: 1.5rem;}
             }
 }
+
+@media screen and (max-width: 992px) {
+    .presentation {
+        height: 50%;
+        flex-direction: column;
+        text-align: center;
+        flex-wrap: wrap;
+    }
+    .container {
+        display: flex;
+        flex-flow: column;
+        height: 50%;
+        max-width: 100vh;
+        margin: 0 auto;
+        justify-content: center;
+    }}
