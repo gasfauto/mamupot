@@ -30,7 +30,6 @@
 
 @media screen and (max-width: 992px) {
     .container_about {
-        display: flex;
-        flex-flow: column;
+        @include flex-column;
         height: 100%;}
 }

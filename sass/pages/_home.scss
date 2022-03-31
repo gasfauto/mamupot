@@ -75,8 +75,7 @@
         flex-wrap: wrap;
     }
     .container {
-        display: flex;
-        flex-flow: column;
+       @include flex-column;
         height: 50%;
         max-width: 100vh;
         margin: 0 auto;
