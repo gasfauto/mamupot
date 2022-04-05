@@ -1,0 +1,61 @@
+
+.formContact {
+    padding-top: 10rem;
+    display: block;
+    width: 65rem;
+    height: 54rem;
+    margin: 0 auto;
+    & form{
+    display: block;
+    width: 55rem;
+    height: 54rem;
+    font-family: $font-primary;
+    font-size: 1.6rem;
+    color: black;
+    padding: 2rem;
+    margin: 0 auto;
+    }
+}
+h2 {
+    font-family: $font-secondary;
+    font-size: 3em;
+    color: $secondary;
+    margin: 0 auto;
+    padding-left: 2rem;
+}
+.formdiv{
+    margin-top: 2rem;
+}
+textarea{
+    width: 40rem;
+    height: 13.4rem;
+}
+.send {
+    width: 7rem;
+    height: 3rem;
+    background-color: #7CC6CA;
+    font-family: $font-primary;
+    font-size: 1em;
+    color: white;
+    border-color: white;
+}
+
+@media screen and (max-width: 768px) {
+    .formContact {
+        padding-top: 10rem;
+       
+        width: 50rem;
+        height: 54rem;
+        margin: 0 auto;
+        & form{
+       
+        width: 55rem;
+        height: 54rem;
+        font-family: $font-primary;
+        font-size: 1.6rem;
+        color: black;
+        
+        margin: 0 auto;
+        }
+    } 
+}
