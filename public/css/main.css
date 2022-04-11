@@ -103,7 +103,8 @@ footer {
   position: fixed;
   width: 100%;
   top: 0;
-  left: 0; }
+  left: 0;
+  z-index: 100; }
 
 .nav {
   display: flex;
@@ -382,7 +383,6 @@ footer {
     grid-template-rows: 1fr 1fr 1fr; } }
 
 .formContact {
-  padding-top: 10rem;
   display: block;
   width: 65rem;
   height: 54rem;
@@ -399,17 +399,18 @@ footer {
 
 h2 {
   font-family: "Meddon", cursive;
-  font-size: 3em;
+  font-size: 2em;
   color: #FAAB34;
   margin: 0 auto;
-  padding-left: 2rem; }
+  padding-bottom: 2rem; }
 
 .formdiv {
   margin-top: 2rem; }
 
 textarea {
   width: 40rem;
-  height: 13.4rem; }
+  height: 13.4rem;
+  resize: none; }
 
 .send {
   width: 7rem;

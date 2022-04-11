@@ -1,6 +1,6 @@
 
 .formContact {
-    padding-top: 10rem;
+    // padding-top: 10rem;
     display: block;
     width: 65rem;
     height: 54rem;
@@ -18,10 +18,10 @@
 }
 h2 {
     font-family: $font-secondary;
-    font-size: 3em;
+    font-size: 2em;
     color: $secondary;
     margin: 0 auto;
-    padding-left: 2rem;
+    padding-bottom: 2rem;
 }
 .formdiv{
     margin-top: 2rem;
@@ -29,6 +29,7 @@ h2 {
 textarea{
     width: 40rem;
     height: 13.4rem;
+    resize: none;
 }
 .send {
     width: 7rem;
