@@ -1,21 +1,35 @@
 
+
+.billboard-media-image {
+    background-image: url(http://www.arbcom.net/wp-content/uploads/2016/07/banner-contacto-1.jpg);
+    min-height: 38rem;
+    max-width: 120rem;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+}
+
+
 .formContact {
     // padding-top: 10rem;
     display: block;
     width: 65rem;
-    height: 54rem;
+    height: 40rem;
     margin: 0 auto;
-    & form{
-    display: block;
-    width: 55rem;
-    height: 54rem;
-    font-family: $font-primary;
-    font-size: 1.6rem;
-    color: black;
-    padding: 2rem;
-    margin: 0 auto;
+
+    & form {
+        display: block;
+        width: 55rem;
+        height: 40rem;
+        font-family: $font-primary;
+        font-size: 1.6rem;
+        color: black;
+        padding: 2rem;
+        margin: 0 auto;
     }
 }
+
 h2 {
     font-family: $font-secondary;
     font-size: 2em;
@@ -23,14 +37,21 @@ h2 {
     margin: 0 auto;
     padding-bottom: 2rem;
 }
-.formdiv{
+
+.formdiv {
     margin-top: 2rem;
 }
-textarea{
+.formdiv_NC {
+    display: inline;
+    margin-top: 2rem;
+}
+
+textarea {
     width: 40rem;
     height: 13.4rem;
     resize: none;
 }
+
 .send {
     width: 7rem;
     height: 3rem;
@@ -43,20 +64,59 @@ textarea{
 
 @media screen and (max-width: 768px) {
     .formContact {
-        padding-top: 10rem;
-       
-        width: 50rem;
-        height: 54rem;
+        padding-top: 0rem;
+
+        max-width: 40rem;
+        height: 45rem;
         margin: 0 auto;
-        & form{
-       
-        width: 55rem;
-        height: 54rem;
-        font-family: $font-primary;
-        font-size: 1.6rem;
-        color: black;
-        
-        margin: 0 auto;
+
+        & form {
+
+            width: 55rem;
+            height: 45rem;
+            font-family: $font-primary;
+            font-size: 1.6rem;
+            color: black;
+
+            margin: 0 auto;
         }
-    } 
+    }
+
+    .billboard-media-image {
+        min-height: 30rem;
+        max-width: 76.8rem;
+        
+    }
+}
+@media screen and (max-width: 576px) {
+    .formContact {
+        padding-top: 0rem;
+        max-width: 40rem;
+
+        & form {
+            width: 40rem;
+        }
+    }
+
+    .formdiv {
+        margin-top: 1rem;
+    }
+    .formdiv_NC {
+        display: block;
+        margin-top: 2rem;
+    }
+    h2 {
+        font-size: 1.6em;
+    }
+    textarea {
+        width: 26rem;
+        height: 13.4rem;
+        resize: none;
+    }
+
+    .billboard-media-image {
+        min-height: 30rem;
+        max-width: 57rem;
+        
+    }
 }

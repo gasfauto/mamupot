@@ -382,15 +382,24 @@ footer {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr; } }
 
+.billboard-media-image {
+  background-image: url(http://www.arbcom.net/wp-content/uploads/2016/07/banner-contacto-1.jpg);
+  min-height: 38rem;
+  max-width: 120rem;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover; }
+
 .formContact {
   display: block;
   width: 65rem;
-  height: 54rem;
+  height: 40rem;
   margin: 0 auto; }
   .formContact form {
     display: block;
     width: 55rem;
-    height: 54rem;
+    height: 40rem;
     font-family: "Nunito Sans", sans-serif;
     font-size: 1.6rem;
     color: black;
@@ -405,6 +414,10 @@ h2 {
   padding-bottom: 2rem; }
 
 .formdiv {
+  margin-top: 2rem; }
+
+.formdiv_NC {
+  display: inline;
   margin-top: 2rem; }
 
 textarea {
@@ -423,14 +436,38 @@ textarea {
 
 @media screen and (max-width: 768px) {
   .formContact {
-    padding-top: 10rem;
-    width: 50rem;
-    height: 54rem;
+    padding-top: 0rem;
+    max-width: 40rem;
+    height: 45rem;
     margin: 0 auto; }
     .formContact form {
       width: 55rem;
-      height: 54rem;
+      height: 45rem;
       font-family: "Nunito Sans", sans-serif;
       font-size: 1.6rem;
       color: black;
-      margin: 0 auto; } }
+      margin: 0 auto; }
+  .billboard-media-image {
+    min-height: 30rem;
+    max-width: 76.8rem; } }
+
+@media screen and (max-width: 576px) {
+  .formContact {
+    padding-top: 0rem;
+    max-width: 40rem; }
+    .formContact form {
+      width: 40rem; }
+  .formdiv {
+    margin-top: 1rem; }
+  .formdiv_NC {
+    display: block;
+    margin-top: 2rem; }
+  h2 {
+    font-size: 1.6em; }
+  textarea {
+    width: 26rem;
+    height: 13.4rem;
+    resize: none; }
+  .billboard-media-image {
+    min-height: 30rem;
+    max-width: 57rem; } }
