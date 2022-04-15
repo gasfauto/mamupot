@@ -382,7 +382,7 @@ footer {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr; } }
 
-.billboard-media-image {
+.contact-media-image {
   background-image: url(../../public/img/banner-contacto-1.jpg);
   min-height: 38rem;
   max-width: 120rem;
@@ -447,7 +447,7 @@ textarea {
       font-size: 1.6rem;
       color: black;
       margin: 0 auto; }
-  .billboard-media-image {
+  .contact-media-image {
     min-height: 30rem;
     max-width: 76.8rem; } }
 
@@ -468,6 +468,28 @@ textarea {
     width: 26rem;
     height: 13.4rem;
     resize: none; }
-  .billboard-media-image {
-    min-height: 30rem;
+  .contact-media-image {
+    min-height: 20rem;
     max-width: 57rem; } }
+
+@media screen and (max-width: 375px) {
+  .formContact {
+    padding-top: 0rem;
+    max-width: 100%;
+    min-height: 50rem; }
+    .formContact form {
+      width: 100%; }
+  .formdiv {
+    margin-top: 1rem; }
+  .formdiv_NC {
+    display: block;
+    margin-top: 2rem; }
+  h2 {
+    font-size: 1.6em; }
+  textarea {
+    width: 100%;
+    height: 13.4rem;
+    resize: none; }
+  .contact-media-image {
+    min-height: 15rem;
+    max-width: 100%; } }
