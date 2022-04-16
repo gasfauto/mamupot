@@ -1,5 +1,13 @@
 /* CUSHIONS & POTS */
-
+.cushion-media-image {
+    background-image: url(../../public/img/banner_cojines.webp);
+    min-height: 38rem;
+    max-width: 120rem;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: cover;
+}
 .title {
     font-family: $font-secondary;
     font-size: 4em;
@@ -39,5 +47,31 @@
 @media screen and (max-width: 992px) {
     .grid_gallery{     
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;}
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap: 2rem;
+    }
+        .container_gallery {
+            & figure {
+            height: 100%;
+            width: 100%;
+            }
+        
+        }
+        .title {
+        padding-top: 1rem;
+            font-size: 3em;
+        }
+}
+
+@media screen and (max-width: 768px){
+    .cushion-media-image {
+        min-height: 30rem;
+        max-width: 100%;
+    }
+}
+@media screen and (max-width: 425px){
+    .cushion-media-image {
+        min-height: 20rem;
+        max-width: 100%;
+    }
 }
